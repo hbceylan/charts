@@ -169,7 +169,7 @@ securityContext:
   # enabled is a flag to enable Security Context
   enabled: true
   # runAsUser is the user ID used to run the container
-  runAsUser: 65534
+  runAsUser: 0
   # fsGroup is the group ID associated with the container
   fsGroup: 65534
 
@@ -185,6 +185,8 @@ hotRestart:
   - ReadWriteMany
   # size is the size of Persistent Volume Claim
   size: 8Gi
+  # path of hostPath volume for non-pvc use cases
+  hostPath:
 
 # Allows to enable a Prometheus to scrape pods, implemented for Hazelcast version >= 3.12 (or 'latest')
 metrics:
